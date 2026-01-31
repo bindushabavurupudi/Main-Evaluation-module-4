@@ -1,6 +1,6 @@
-##Table name: trips
+    ##Table name: trips
 
-##Columns: 
+    ##Columns: 
     - id: uuid: primary key
     - customer_id: uuid: foreign key(users(id))
     - vehicle_id: uuid: foreign key(vehicles(id))
