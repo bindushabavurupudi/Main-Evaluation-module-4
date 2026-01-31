@@ -17,7 +17,7 @@
 - driver assignment is optional initially
 
 
-##Relationships
+## Relationships
 - many vehicles belong to one owner
 - one vehicle can have one driver
 - one vehicle can be used in many trips
