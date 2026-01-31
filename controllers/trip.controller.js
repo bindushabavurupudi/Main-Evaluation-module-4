@@ -29,6 +29,14 @@ export const endTrip = async (req, res)=>{
 
     const cost = trip.distance_km * trip.vehicles.rate_per_km;
 
-    await 
+    await supabase.from("trips")
+    .update({isCompleted: true, tripCost: cost})
+    .eq("id", tripId);
+
+    await supabase.from("vehicles")
+    .update({isAvailable: true})
+    .eq("id", trip.vehicle_id);
+
+    res.send({message: "Trip ended"});
     
-}
+};
